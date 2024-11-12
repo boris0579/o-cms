@@ -1,0 +1,24 @@
+// main.scss
+
+// 1. Импорт переменных и базовых стилей
+@use "base/variables";
+@use "base/reset";
+// @import 'base/typography';
+
+// 2. Импорт утилит и миксинов
+// @import 'utils/mixins';
+// @import 'utils/functions';
+
+// 3. Импорт стилей для разметки
+// @import 'layout/grid';
+// @import 'layout/header';
+// @import 'layout/footer';
+
+// 4. Импорт компонентов
+// @import 'components/button';
+// @import 'components/card';
+// @import 'components/modal';
+
+// 5. Импорт стилей для страниц
+// @import 'pages/home';
+// @import 'pages/about';
