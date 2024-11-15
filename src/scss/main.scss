@@ -1,24 +1,40 @@
-// main.scss
-
-// 1. Импорт переменных и базовых стилей
-@use "base/variables";
+@use "base/fonts";
+@use "base/variables" as *;
 @use "base/reset";
-// @import 'base/typography';
 
-// 2. Импорт утилит и миксинов
-// @import 'utils/mixins';
+// UI
+@use "ui/buttons";
+@use "ui/input";
+@use "ui/select";
+@use "ui/checkbox";
+@use "ui/floating-panel";
+@use "ui/navbar";
+@use "ui/age-label";
+@use "ui/footer";
+
+// @use 'utils/mixins';
 // @import 'utils/functions';
 
-// 3. Импорт стилей для разметки
 // @import 'layout/grid';
 // @import 'layout/header';
 // @import 'layout/footer';
 
-// 4. Импорт компонентов
 // @import 'components/button';
 // @import 'components/card';
 // @import 'components/modal';
 
-// 5. Импорт стилей для страниц
 // @import 'pages/home';
 // @import 'pages/about';
+
+body {
+    font-family: $font-family-base;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    background-color: $body-bg;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

@@ -1,0 +1,58 @@
+// Сброс стилей
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; // Используем стандартный размер шрифта
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.4;
+    background-color: #fff;
+    color: #333;
+}
+
+// Сброс стилей для всех тегов
+a {
+    text-decoration: none;
+    color: inherit; // Снимаем стандартное подчеркивание и цвет ссылки
+}
+
+ul,
+ol {
+    list-style: none; // Убираем маркеры списка
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto; // Убираем полосы прокрутки, если изображения большие
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+table {
+    border-collapse: collapse; // Убираем промежутки между ячейками таблицы
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc; // Стилизация горизонтальной линии
+}

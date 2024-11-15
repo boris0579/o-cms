@@ -1,0 +1,274 @@
+@use "../base/variables" as *;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+    padding: 22px 30px;
+    background-color: transparent;
+    height: 70px;
+    z-index: 3;
+    position: sticky;
+
+    &--dark {
+        background: $navbar-dark;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        z-index: 9;
+        flex-shrink: 0;
+
+        &-icon {
+            width: 36px;
+            height: 28px;
+        }
+
+        &-text {
+            color: $color-primary;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+    &__right {
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__divider {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__menu-item {
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: $transition-slow;
+        }
+
+        // Состояние active — линия `$color-primary`
+        &--active {
+            color: $color-primary;
+
+            &::before {
+                background-color: $color-primary;
+            }
+        }
+
+        // Состояние hover — линия белого цвета
+        &:hover::before {
+            background-color: #ffffff;
+        }
+    }
+
+    &__cart {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        width: max-content;
+        height: 30px;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 30px;
+
+        &-icon {
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__cart-text {
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-right: 5px;
+    }
+    &__cart-count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        background: $color-primary;
+        border-radius: 50%;
+        color: #fff;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        flex-shrink: 0;
+    }
+
+    &__icons {
+        display: flex;
+        gap: 10px;
+        margin-left: auto;
+
+        &-item {
+            width: 34px;
+            height: 34px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: none;
+            }
+            &:last-child {
+                display: none; // Скрываем menu
+            }
+        }
+    }
+
+    &__side-panel {
+        position: fixed;
+        top: 0px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #232323;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 15px;
+        transition: right 0.3s ease;
+        z-index: 7;
+
+        &[data-panel="open"] {
+            right: 0;
+        }
+    }
+
+    // Смена иконки при клике
+    [data-icon] {
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+
+        &[data-icon="menu"] {
+            background-image: url("../assets/icons/menu.svg");
+        }
+
+        &[data-icon="close"] {
+            background-image: url("../assets/icons/close.svg");
+        }
+    }
+
+    &__side-menu-item {
+        color: #fff;
+        font-weight: 600;
+        line-height: 12px;
+        text-transform: uppercase;
+
+        &--active {
+            color: $color-primary;
+        }
+    }
+
+    &__side-divider {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        left: 0;
+    }
+
+    &__side-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    @media (max-width: 1200px) and (min-width: 834px) {
+        &__logo-text {
+            display: none;
+        }
+
+        &__cart-text {
+            display: none;
+        }
+
+        &__menu {
+            column-gap: 20px;
+        }
+    }
+
+    @media (max-width: 834px) {
+        padding: 22px 15px;
+
+        &__logo-text {
+            display: block;
+        }
+
+        &__menu {
+            display: none; // Скрываем основное меню
+        }
+
+        &__icons {
+            &-item {
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 520px) {
+        padding: 22px 15px;
+
+        &__logo {
+            width: 28px;
+            height: 21px;
+        }
+
+        &__logo-text {
+            display: none;
+        }
+
+        &__menu {
+            display: none; // Полностью скрываем меню
+        }
+
+        &__cart-text {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@use "../base/variables" as *;
+
+.input {
+    width: 300px;
+    height: 44px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+
+    &__field {
+        padding: 14px 16px;
+        padding-left: 44px;
+        width: 100%;
+        border: none;
+        border-radius: 7px;
+        outline: none;
+        color: #222;
+        background-color: #fafafa;
+        &::placeholder {
+            font-family: $font-family-book;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 19px;
+            letter-spacing: 0.02em;
+            color: #666666;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 16px;
+        width: 18px;
+        height: 18px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &--search {
+            background-image: url("../assets/icons/input-search.svg");
+        }
+        &--date {
+            background-image: url("../assets/icons/input-date.svg");
+        }
+        &--clear {
+            display: none;
+            width: 10px;
+            height: 10px;
+            background-image: url("../assets/icons/input-clear.svg");
+            left: calc(100% - 26px);
+        }
+    }
+
+    &--filled {
+        .input__icon--clear {
+            display: block;
+        }
+    }
+}

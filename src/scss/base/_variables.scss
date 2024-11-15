@@ -1,0 +1,22 @@
+// Спартак
+$color-primary: #c8122d;
+$color-secondary: #8c0d20;
+$color-light: #f9e7ea;
+
+// Зенит
+// $color-primary: #1E8EB9;
+// $color-secondary: #25B1E7;
+// $color-light: #DEF3FB;
+
+$body-bg: #ccc;
+$navbar-dark: rgba(17, 17, 17, 0.75);
+
+// Анимация
+$transition-fast: background-color 0.2s ease, color 0.2s ease;
+$transition-default: background-color 0.3s ease, color 0.3s ease;
+$transition-slow: background-color 0.5s ease, color 0.5s ease;
+
+// Базовый шрифт для всего текста
+$font-family-base: "Suisse Intl", sans-serif;
+// Шрифты с различными начертаниями
+$font-family-book: "Suisse Intl Book", sans-serif;

@@ -1,0 +1,92 @@
+@use "../base/variables" as *;
+@use "../utils/mixins" as mixin;
+
+.button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: $transition-slow;
+    line-height: normal;
+
+    &--cta {
+        background-color: $color-primary;
+        color: #fff;
+        border: 1px solid $color-primary;
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+
+    &--tickets {
+        color: $color-primary;
+        &:hover {
+            background-color: $color-light;
+        }
+    }
+
+    &--outline {
+        color: #fff;
+        border: 1px solid #fff;
+        &:hover {
+            background-color: #fff;
+            color: $color-primary;
+        }
+    }
+
+    &--link {
+        color: $color-primary;
+        padding: 0;
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    .button__icon {
+        width: 14px;
+        height: 12px;
+        margin-left: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        &--tickets-right {
+            background-image: url("../assets/icons/arrow-right.svg");
+        }
+
+        &--outline-right {
+            @include mixin.masked-icon(
+                "../assets/icons/arrow-outline-right.svg",
+                #fff,
+                $transition-slow
+            );
+        }
+
+        &--link {
+            width: 12px;
+            @include mixin.masked-icon(
+                "../assets/icons/arrow-down-right.svg",
+                $color-primary,
+                $transition-slow
+            );
+        }
+    }
+
+    &:hover .button__icon--outline-right {
+        background-color: $color-primary;
+    }
+
+    &:hover .button__icon--link {
+        background-color: $color-secondary;
+    }
+
+    @media (max-width: 520px) {
+        width: 100%;
+        font-size: 14px;
+        justify-content: center;
+    }
+}
