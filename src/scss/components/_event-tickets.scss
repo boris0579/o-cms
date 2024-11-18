@@ -1,0 +1,221 @@
+@use "../base/variables" as *;
+
+.event-tickets {
+    display: flex;
+    max-height: 110px;
+
+    &__wrap {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__datetime,
+    &__details,
+    &__actions {
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 24px 30px;
+        overflow: hidden;
+        border-style: solid;
+        border-color: #e7e7e7;
+    }
+
+    &__datetime {
+        border-width: 1px 0 1px 1px;
+    }
+
+    &__details {
+        border-width: 1px 0 1px 0;
+        flex-grow: 1;
+    }
+
+    &__actions {
+        border-width: 1px 1px 1px 0;
+    }
+
+    &__datetime,
+    &__details {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background-image: url("../assets/icons/event-tickets-border-right.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
+    &__day {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    &__day,
+    &__title {
+        font-family: "KULAG", sans-serif;
+        font-size: 34px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color-primary;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    &__time {
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #222222;
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    &__info {
+        flex-grow: 1;
+    }
+
+    &__location {
+        display: inline-flex;
+        column-gap: 7px;
+        align-items: center;
+        margin-right: 22px;
+    }
+
+    &__team-logo {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        &--mobile {
+            display: none;
+        }
+    }
+
+    &__labels {
+        display: inline-flex;
+        column-gap: 22px;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222222;
+        text-align: center;
+    }
+
+    @media (max-width: 1200px) {
+        flex-wrap: wrap;
+
+        &__border-bottom {
+            display: block;
+            width: calc(100% - 20px);
+            height: 1px;
+            background-image: url("../assets/icons/event-tickets-border-bottom.svg");
+            background-repeat: repeat-x;
+            background-position: center;
+            background-size: contain;
+            margin: -1px 0 0 10px;
+            z-index: 1;
+
+            &--mobile {
+                display: none;
+            }
+        }
+
+        &__actions {
+            flex-grow: 1;
+            border-width: 0 1px 1px 1px;
+            border-radius: 10px;
+            padding: 10px 30px;
+            justify-content: center;
+        }
+
+        &__datetime {
+            border-width: 1px 0 0 1px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        &__details {
+            border-width: 1px 1px 0 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        &__datetime,
+        &__details {
+            &::after {
+                background-image: none;
+            }
+        }
+    }
+
+    @media (max-width: 834px) {
+        &__wrap {
+            flex-wrap: wrap;
+        }
+
+        &__border-bottom {
+            &--mobile {
+                display: block;
+            }
+        }
+
+        &__datetime {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-width: 1px 1px 0 1px;
+            border-radius: 10px;
+        }
+
+        &__details {
+            border-width: 0 1px 0 1px;
+            border-radius: 10px;
+        }
+
+        &__team-logo {
+            display: none;
+            &--mobile {
+                display: flex;
+                width: 22px;
+                height: 22px;
+            }
+        }
+
+        &__datetime,
+        &__details,
+        &__actions {
+            padding: 20px;
+        }
+
+        &__location {
+            margin-bottom: 8px;
+        }
+
+        &__labels {
+            column-gap: 15px;
+        }
+        &__datetime-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 15px;
+        }
+    }
+}

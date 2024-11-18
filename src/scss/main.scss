@@ -9,8 +9,11 @@
 @use "ui/checkbox";
 @use "ui/floating-panel";
 @use "ui/navbar";
-@use "ui/age-label";
+@use "ui/info-label";
 @use "ui/footer";
+
+// Components
+@use "components/event-tickets";
 
 // @use 'utils/mixins';
 // @import 'utils/functions';
