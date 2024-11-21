@@ -83,7 +83,7 @@ body {
 
 .navbar {
     &.scrolled {
-        // background: rgba(0, 0, 0, 0.25);
+        background: rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(5px);
     }
 }
