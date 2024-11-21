@@ -1,0 +1,107 @@
+@use "../base/variables" as *;
+
+.main-splide {
+    height: 735px;
+    .splide__pagination {
+        bottom: 15%;
+        left: 50%;
+    }
+}
+
+.main-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &__image {
+        width: 100%;
+        height: 735px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        z-index: 2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent, $page-bg-color);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    &__content {
+        position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translateX(-50%);
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+        // max-width: 90%;
+        top: 50%;        /* Центрирование по вертикали */
+        left: 50%;       /* Центрирование по горизонтали */
+        transform: translate(-50%, -50%);
+    }
+
+    &__subtitle, &__date {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__subtitle {
+        text-align: left;
+    }
+
+    &__title {
+        font-family: "KULAG", sans-serif;
+        line-height: 1;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 75px;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        margin-top: 35px;
+    }
+
+    @media (max-width: 834px) {
+        &__title {
+            font-size: 60px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__title-dash {
+            display: none;
+        }
+
+        &__title {
+            font-size: 52px;
+        }
+
+        &__subtitle,
+        &__date {
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+        }
+        &__logo {
+            flex-wrap: wrap;
+        }
+    }
+}

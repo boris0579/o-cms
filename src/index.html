@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
-    <body>
+    <body class="page">
         <!-- Start navbar -->
-        <header class="navbar navbar--dark">
+        <header class="navbar">
             <div class="navbar__logo">
                 <img
                     src="assets/icons/logo.svg"
@@ -67,306 +67,141 @@
                     </div>
                 </div>
             </div>
-            <!-- Start sidebar -->
-            <div class="navbar__side-panel" data-panel="closed">
-                <nav class="navbar__side-menu">
-                    <ul class="navbar__side-list">
-                        <li>
-                            <a
-                                href="/"
-                                class="navbar__side-menu-item navbar__side-menu-item--active"
-                                >Главная</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#!" class="navbar__side-menu-item"
-                                >VIP Билеты</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#!" class="navbar__side-menu-item"
-                                >Кэшбек</a
-                            >
-                        </li>
-                        <li><div class="navbar__side-divider"></div></li>
-                        <li>
-                            <a href="#!" class="navbar__side-menu-item"
-                                >Новости</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#!" class="navbar__side-menu-item"
-                                >О клубе</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#!" class="navbar__side-menu-item"
-                                >Гарантия</a
-                            >
-                        </li>
-                        <li>
-                            <a href="/contacts" class="navbar__side-menu-item"
-                                >Контакты</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- End sidebar -->
         </header>
         <!-- End navbar-->
 
-        <!-- Start buttons -->
-        <button class="button button--cta">Выбрать билеты</button>
-        <button class="button button--tickets">
-            Выбрать билеты
-            <span class="button__icon button__icon--tickets-right"></span>
-        </button>
-        <button class="button button--outline">Заказать звонок</button>
-        <button class="button button--outline">
-            Заказать звонок
-            <span class="button__icon button__icon--outline-right"></span>
-        </button>
-        <!-- End buttons -->
-        <a href="#!" class="button button--link"
-            >Показать еще <span class="button__icon button__icon--link"></span
-        ></a>
-
-        <!-- Start inputs -->
-        <div class="form">
-            <div class="form__group form__group--input">
-                <!-- При вводе в поле добавляется класс input--filled -->
-                <div class="input input--filled">
-                    <input
-                        type="text"
-                        class="input__field"
-                        placeholder="Найти..."
-                    />
-                    <span class="input__icon input__icon--search"></span>
-                    <span class="input__icon input__icon--clear"></span>
-                </div>
-
-                <div class="input">
-                    <input
-                        type="text"
-                        class="input__field"
-                        placeholder="Дата"
-                    />
-                    <span class="input__icon input__icon--date"></span>
-                </div>
-            </div>
+        <!-- Start sidebar -->
+        <div class="sidebar" data-panel="closed">
+            <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                    <li>
+                        <a
+                            href="/"
+                            class="sidebar__menu-item sidebar__menu-item--active"
+                            >Главная</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar__menu-item">VIP Билеты</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar__menu-item">Кэшбек</a>
+                    </li>
+                    <li><span class="sidebar__divider"></span></li>
+                    <li>
+                        <a href="#!" class="sidebar__menu-item">Новости</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar__menu-item">О клубе</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="sidebar__menu-item">Гарантия</a>
+                    </li>
+                    <li>
+                        <a href="/contacts" class="sidebar__menu-item"
+                            >Контакты</a
+                        >
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <!-- End inputs -->
+        <!-- End sidebar -->
 
-        <!-- Start select -->
-        <div class="select" data-select id="citySelect">
-            <div class="select__selected" data-select-selected>Город</div>
-            <div class="select__container" data-select-options>
-                <div class="select__options">
-                    <div
-                        class="select__option"
-                        data-select-option
-                        data-value="kazan"
-                    >
-                        Казань
-                    </div>
-                    <div
-                        class="select__option"
-                        data-select-option
-                        data-value="moscow"
-                    >
-                        Москва
-                    </div>
-                    <div
-                        class="select__option"
-                        data-select-option
-                        data-value="krasnodar"
-                    >
-                        Краснодар
-                    </div>
-                    <div
-                        class="select__option"
-                        data-select-option
-                        data-value="voronezh"
-                    >
-                        Воронеж
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End select -->
-
-        <!-- Start checkbox -->
-        <label class="checkbox">
-            <input type="checkbox" class="checkbox__input" />
-            <span class="checkbox__box"></span>
-            <span class="checkbox__text">
-                Даю согласие на <a href="#!">обработку персональных данных</a>,
-                а также соглашаюсь с условиями<br />
-                договора <a href="#!">оферты</a>
-            </span>
-        </label>
-        <!-- End checkbox -->
-
-        <!-- Start floating order panel -->
-        <div class="floating-panel">
-            <div class="floating-panel__item-left">
-                <span class="floating-panel__info">Билеты: не выбраны</span>
-                <span class="floating-panel__info">Парковка: 1 место</span>
-                <button class="floating-panel__clear">Очистить</button>
-            </div>
-            <div class="floating-panel__item-right">
-                <span class="floating-panel__total">Итого: 1 200₽</span>
-                <button class="button button--outline">
-                    Оформить заказ
-                    <span
-                        class="button__icon button__icon--outline-right"
-                    ></span>
-                </button>
-            </div>
-        </div>
-        <div class="floating-panel">
-            <div class="floating-panel__item-left">
-                <span class="floating-panel__info">Выбраны билеты: 2 шт.</span>
-                <span class="floating-panel__info">Парковка: без парковки</span>
-                <button class="floating-panel__clear">Очистить</button>
-            </div>
-            <div class="floating-panel__item-right">
-                <span class="floating-panel__total">Итого: 16 200₽</span>
-                <button class="button button--outline">
-                    Оформить заказ
-                    <span
-                        class="button__icon button__icon--outline-right"
-                    ></span>
-                </button>
-            </div>
-        </div>
-        <div class="floating-panel">
-            <div class="floating-panel__item-left">
-                <span class="floating-panel__info">Выбраны билеты: 2 шт.</span>
-                <span class="floating-panel__info">Парковка: 2 места</span>
-                <button class="floating-panel__clear">Очистить</button>
-            </div>
-            <div class="floating-panel__item-right">
-                <span class="floating-panel__total">Итого: 8 200₽</span>
-                <button class="button button--outline">
-                    Оформить заказ
-                    <span
-                        class="button__icon button__icon--outline-right"
-                    ></span>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile-->
-        <div class="floating-panel floating-panel--mobile">
-            <div class="floating-panel__top">
-                <span class="floating-panel__info">Билеты: 2</span>
-                <span class="floating-panel__info">Парковка: 2</span>
-                <span class="floating-panel__total">Итого: 1 200₽</span>
-                <button class="floating-panel__clear"></button>
-            </div>
-            <button class="button button--outline">
-                Оформить заказ
-                <span class="button__icon button__icon--outline-right"></span>
-            </button>
-        </div>
-        <!-- End floating order panel -->
-
-        <!-- Start age label -->
-        <span class="info-label">
-            <span class="info-label__text">16+</span>
-        </span>
-        <span class="info-label info-label--active">
-            <span class="info-label__text">16+</span>
-        </span>
-        <span class="info-label info-label--icon">
-            <span class="info-label__icon"
-                ><img src="assets/icons/location.svg" alt="Location"
-            /></span>
-        </span>
-        <!-- End age label -->
-
-        <!-- Start event tickets -->
-        <div class="event-tickets">
-            <div class="event-tickets__wrap">
-                <div class="event-tickets__datetime">
-                    <div class="event-tickets__datetime-container">
-                        <div class="event-tickets__day">19 Окт</div>
-                        <div class="event-tickets__time">суббота, 16:30</div>
-                    </div>
-                    <!-- Mobile -->
-                    <div
-                        class="event-tickets__team-logo event-tickets__team-logo--mobile"
-                    >
-                        <img
-                            class="event-tickets__team-icon"
-                            src="assets/icons/cup.svg"
-                            alt="Логотип команды"
-                        />
-                    </div>
-                    <!---->
-                </div>
-                <!-- Mobile -->
-                <div
-                    class="event-tickets__border-bottom event-tickets__border-bottom--mobile"
-                ></div>
-                <!---->
-                <div class="event-tickets__details">
-                    <div class="event-tickets__team-logo">
-                        <img
-                            class="event-tickets__team-icon"
-                            src="assets/icons/cup.svg"
-                            alt="Логотип команды"
-                        />
-                    </div>
-                    <div class="event-tickets__info">
-                        <h3 class="event-tickets__title">
-                            ФК Краснодар - Спартак Москва
-                        </h3>
-
-                        <span class="event-tickets__location">
-                            <span class="info-label info-label--icon">
-                                <span class="info-label__icon">
-                                    <img
-                                        src="assets/icons/location.svg"
-                                        alt="Местоположение"
-                                        class="info-label__image"
-                                    />
-                                </span>
-                            </span>
-                            <span class="event-tickets__location-text">
-                                Москва, Лукойл Арена (Открытие Арена)
-                            </span>
-                        </span>
-                        <span class="event-tickets__labels">
-                            <span class="info-label">
-                                <span class="info-label__text">16+</span>
-                            </span>
-                            <span class="info-label">
-                                <span class="info-label__text"
-                                    >Нужен Fan ID</span
-                                >
-                            </span>
-                        </span>
-                    </div>
+        <main class="main">
+            <!-- Start main splide -->
+            <div class="splide main-splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="slide main-slide">
+                                <img
+                                    src="assets/images/hero-image.jpg"
+                                    alt="Первый слайд"
+                                    class="main-slide__image"
+                                />
+                                <div class="main-slide__content container">
+                                    <figure class="main-slide__logo">
+                                        <img
+                                            src="assets/images/team-logo.png"
+                                            alt="Логотип команды"
+                                            class="main-slide__team-image"
+                                            width="26"
+                                            height="26"
+                                        />
+                                        <figcaption
+                                            class="main-slide__subtitle"
+                                        >
+                                            12 тур РПЛ / Москва, Лужники
+                                        </figcaption>
+                                    </figure>
+                                    <h2 class="main-slide__title">
+                                        КРАСНОДАР
+                                        <span class="main-slide__title-dash"
+                                            >—</span
+                                        >
+                                        СПАРТАК
+                                    </h2>
+                                    <p class="main-slide__date">
+                                        <time datetime="2024-10-19T16:30"
+                                            >Суббота, 19 октября в 16:30</time
+                                        >
+                                    </p>
+                                    <button
+                                        class="button button--cta main-slide__btn"
+                                    >
+                                        Выбрать билеты
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="slide main-slide">
+                                <img
+                                    src="assets/images/hero-image.jpg"
+                                    alt="Второй слайд"
+                                    class="main-slide__image"
+                                />
+                                <div class="main-slide__content container">
+                                    <figure class="main-slide__logo">
+                                        <img
+                                            src="assets/images/team-logo.png"
+                                            alt="Логотип команды"
+                                            class="main-slide__team-image"
+                                            width="26"
+                                            height="26"
+                                        />
+                                        <figcaption
+                                            class="main-slide__subtitle"
+                                        >
+                                            12 тур РПЛ / Москва, Лужники
+                                        </figcaption>
+                                    </figure>
+                                    <h2 class="main-slide__title">
+                                        КРАСНОДАР
+                                        <span class="main-slide__title-dash"
+                                            >—</span
+                                        >
+                                        СПАРТАК
+                                    </h2>
+                                    <p class="main-slide__date">
+                                        <time datetime="2024-10-19T16:30"
+                                            >Суббота, 19 октября в 16:30</time
+                                        >
+                                    </p>
+                                    <button
+                                        class="button button--cta main-slide__btn"
+                                    >
+                                        Выбрать билеты
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="event-tickets__border-bottom"></div>
-            <div class="event-tickets__actions">
-                <div class="event-tickets__price">от 1600₽</div>
-                <a
-                    href="#"
-                    class="button button--tickets"
-                    aria-label="Выбрать билеты"
-                >
-                    Выбрать билеты
-                    <span
-                        class="button__icon button__icon--tickets-right"
-                    ></span>
-                </a>
-            </div>
-        </div>
-        <!-- End event tickets -->
+            <!-- End main splide-->
+            <div class="container"></div>
+        </main>
 
         <!-- Start footer -->
         <footer class="footer">

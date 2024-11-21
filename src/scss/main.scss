@@ -9,11 +9,14 @@
 @use "ui/checkbox";
 @use "ui/floating-panel";
 @use "ui/navbar";
+@use "ui/sidebar";
 @use "ui/info-label";
 @use "ui/footer";
+@use "plugins/splidejs.scss";
 
 // Components
 @use "components/event-tickets";
+@use "components/main-splide";
 
 // @use 'utils/mixins';
 // @import 'utils/functions';
@@ -35,9 +38,27 @@ body {
     line-height: normal;
     font-size: 16px;
     letter-spacing: 0.02em;
-    background-color: $body-bg;
+    background-color: $page-bg-color;
 }
 
 .no-scroll {
     overflow: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $page-bg-color;
+}
+
+.main {
+    flex-grow: 1;
+    margin-top: -70px; // Высота navbar
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 15px;
 }

@@ -10,6 +10,8 @@
     height: 70px;
     z-index: 3;
     position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
 
     &--dark {
         background: $navbar-dark;
@@ -47,7 +49,7 @@
         display: flex;
         align-items: center;
         gap: 25px;
-    }--
+    }
 
     &__divider {
         font-weight: 600;
@@ -116,6 +118,7 @@
         color: #ffffff;
         margin-right: 5px;
     }
+    
     &__cart-count {
         display: flex;
         justify-content: center;
@@ -157,24 +160,6 @@
         }
     }
 
-    &__side-panel {
-        position: fixed;
-        top: 0px;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: #232323;
-        display: flex;
-        flex-direction: column;
-        padding: 100px 15px;
-        transition: right 0.3s ease;
-        z-index: 7;
-
-        &[data-panel="open"] {
-            right: 0;
-        }
-    }
-
     // Смена иконки при клике
     [data-icon] {
         background-position: center;
@@ -189,32 +174,6 @@
         &[data-icon="close"] {
             background-image: url("../assets/icons/close.svg");
         }
-    }
-
-    &__side-menu-item {
-        color: #fff;
-        font-weight: 600;
-        line-height: 12px;
-        text-transform: uppercase;
-
-        &--active {
-            color: $color-primary;
-        }
-    }
-
-    &__side-divider {
-        width: 100%;
-        height: 1px;
-        background-color: rgba(255, 255, 255, 0.2);
-        position: absolute;
-        left: 0;
-    }
-
-    &__side-list {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
     }
 
     @media (max-width: 1200px) and (min-width: 834px) {
