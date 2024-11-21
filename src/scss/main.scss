@@ -66,6 +66,9 @@ body {
     // page main
     &--main {
         margin-top: -125px;
+        @media (max-width: 390px) {
+            padding: 0;
+        }
     }
 }
 
