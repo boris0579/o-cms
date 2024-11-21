@@ -11,7 +11,7 @@
     z-index: 3;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(5px);
+    transition: backdrop-filter 0.5s ease, background-color 0.5s ease;
 
     &--dark {
         background: $navbar-dark;
@@ -118,7 +118,7 @@
         color: #ffffff;
         margin-right: 5px;
     }
-    
+
     &__cart-count {
         display: flex;
         justify-content: center;

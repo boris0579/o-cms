@@ -1,9 +1,10 @@
 import '../scss/main.scss'
 
-import SplideSlider from './plugins/splidejs'
+import initSlider from './plugins/splidejs/initSlider'
 
 import CustomSelect from './ui/CustomSelect'
 import Sidebar from './ui/Sidebar'
+import NavbarScrollEffect from './ui/NavbarScrollEffect'
 
 // Инициализация кастомных селектов после загрузки страницы
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,21 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         selectElements.forEach(selectElement => new CustomSelect(selectElement))
     }
 
-    // Слайдер на главной странице
-    const mainSliderOptions = {
-        type: 'loop',
-        autoplay: true,
-        interval: 3000,
-        pauseOnHover: true,
-        arrows: false,
-        pagination: true,
-        live: false
-        // classes: {
-        //     pagination: 'custom-pagination', // Заменяем стандартный класс пагинации
-        //     page: 'custom-pagination__item', // Класс для точек пагинации
-        // },
-    }
+    // Инициализация слайдера
+    initSlider()
 
-    const mainSlider = new SplideSlider('.main-splide', mainSliderOptions)
-    mainSlider.init()
+    //
+    new NavbarScrollEffect('.navbar')
 })

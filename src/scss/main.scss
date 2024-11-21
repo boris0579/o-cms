@@ -17,6 +17,7 @@
 // Components
 @use "components/event-tickets";
 @use "components/main-splide";
+@use "components/events-filtered";
 
 // @use 'utils/mixins';
 // @import 'utils/functions';
@@ -60,5 +61,26 @@ body {
 .container {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 15px;
+    padding: 0 15px;
+
+    // page main
+    &--main {
+        margin-top: -125px;
+    }
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    &__link {
+        margin: 22px auto 6px;
+    }
+}
+
+.navbar {
+    &.scrolled {
+        // background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+    }
 }

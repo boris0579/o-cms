@@ -54,6 +54,7 @@
     &__day {
         margin-bottom: 5px;
         text-align: center;
+        display: block;
     }
 
     &__day,
@@ -72,6 +73,7 @@
         line-height: 16px;
         text-align: center;
         color: #222222;
+        display: block;
     }
 
     &__details {
@@ -121,6 +123,7 @@
 
     @media (max-width: 1200px) {
         flex-wrap: wrap;
+        max-height: 100%;
 
         &__border-bottom {
             display: block;
@@ -130,7 +133,7 @@
             background-repeat: repeat-x;
             background-position: center;
             background-size: contain;
-            margin: -1px 0 0 10px;
+            margin: 0 auto;
             z-index: 1;
 
             &--mobile {
@@ -211,11 +214,18 @@
         &__labels {
             column-gap: 15px;
         }
+        
         &__datetime-container {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             column-gap: 15px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        &__border-bottom {
+            background-image: url("../assets/icons/event-tickets-border-bottom-mobile.svg");
         }
     }
 }
