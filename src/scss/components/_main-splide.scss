@@ -26,7 +26,7 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         z-index: 2;
     }
 
@@ -43,11 +43,12 @@
     }
 
     &__content {
+        width: 100%;
         position: absolute;
         text-align: center;
         color: #fff;
         z-index: 2;
-        top: 50%;
+        top: 42%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -64,12 +65,22 @@
     }
 
     &__title {
+        display: inline-flex;
+        column-gap: 15px;
+        align-items: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__team,
+    &__title-dash {
         font-family: "KULAG", sans-serif;
         line-height: 1;
         font-style: normal;
         font-weight: 400;
         font-size: 75px;
-        margin-bottom: 30px;
+        text-transform: uppercase;
     }
 
     &__btn {
@@ -87,8 +98,13 @@
             display: none;
         }
 
-        &__title {
+        &__team,
+        &__title-dash {
             font-size: 52px;
+        }
+
+        &__title {
+            flex-direction: column;
         }
 
         &__subtitle,
@@ -97,8 +113,10 @@
             line-height: 16px;
             text-align: center;
         }
+
         &__logo {
-            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
         }
     }
 }
