@@ -33,11 +33,11 @@
     &::after {
         content: "";
         position: absolute;
-        top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, transparent, $page-bg-color);
+        height: 50%;
+        bottom: 0;
+        background: linear-gradient(to top, $page-bg-color, transparent);
         pointer-events: none;
         z-index: 1;
     }

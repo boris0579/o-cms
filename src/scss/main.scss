@@ -13,6 +13,7 @@
 @use "ui/info-label";
 @use "ui/footer";
 @use "ui/tabs";
+@use "ui/section-header";
 
 // Plugins
 @use "plugins/splidejs.scss";
@@ -21,6 +22,8 @@
 @use "components/event-tickets";
 @use "components/main-splide";
 @use "components/events-filtered";
+@use "components/special-offers";
+@use "components/ticket-purchase";
 
 // @use 'utils/mixins';
 // @import 'utils/functions';
@@ -67,7 +70,7 @@ body {
     padding: 0 15px;
 
     // page main
-    &--main {
+    &--filter {
         margin-top: -125px;
         @media (max-width: 390px) {
             padding: 0;

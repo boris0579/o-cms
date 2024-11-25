@@ -1,0 +1,123 @@
+@use "../base/variables" as *;
+
+.ticket-purchase {
+    background: url("../assets/images/stadium-background.jpg") no-repeat center /
+        cover;
+    color: #fff;
+    padding-top: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -150px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 30%; // Высота градиента
+        pointer-events: none; // Градиент не будет перекрывать клики
+        z-index: 1;
+    }
+
+    &::before {
+        top: 0; // Затемнение сверху
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    }
+
+    &::after {
+        bottom: 0; // Затемнение снизу
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    }
+
+    &__header {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 60px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        font-family: "KULAG", serif;
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 36px;
+        @media (max-width: 390px) {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__description,
+    &__subtext {
+        line-height: 1.3;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+        @media (max-width: 390px) {
+            font-size: 14px;
+        }
+    }
+
+    &__subtext {
+        margin-top: 30px;
+        @media (max-width: 390px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 36px;
+        z-index: 2;
+        position: relative;
+        @media (max-width: 390px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__features {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        z-index: 2;
+        position: relative;
+
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            flex-basis: 260px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(7.5px);
+            border-radius: 8px;
+
+            &__icon {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+                object-position: center;
+            }
+
+            &__text {
+                line-height: 1.1;
+            }
+
+            @media (max-width: 834px) {
+                flex-basis: 100%;
+            }
+        }
+    }
+    @media (max-width: 834px) {
+        padding-top: 230px;
+    }
+}
