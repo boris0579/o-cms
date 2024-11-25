@@ -1,10 +1,53 @@
 .events-filtered {
     background: #ffffff;
     border-radius: 14px;
-    padding: 25px;
     position: relative;
     z-index: 1;
+
+    &__tabs {
+        width: 100%;
+        margin: 0 -25px 0 0;
+        overflow: hidden;
+    }
+
+    &__filters {
+        padding: 25px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &__list {
+        padding: 25px;
+    }
+
+    &__items {
+        margin-top: 25px;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+    }
+
+    @media (max-width: 834px) {
+        &__items {
+            grid-template-rows: repeat(4, 1fr); // 4 строки
+            grid-template-columns: repeat(2, 1fr); // 2 колонки
+            gap: 10px;
+        }
+        &__item:first-child,
+        &__item:last-child {
+            grid-column: span 2;
+        }
+    }
+    
     @media (max-width: 390px) {
         padding: 15px;
+
+        &__filters {
+            margin: -15px -15px 0 -15px;
+            padding: 15px;
+        }
+        &__list {
+            padding: 15px 0 0;
+        }
     }
 }

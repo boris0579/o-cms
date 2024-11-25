@@ -5,6 +5,7 @@ import initSlider from './plugins/splidejs/initSlider'
 import CustomSelect from './ui/CustomSelect'
 import Sidebar from './ui/Sidebar'
 import NavbarScrollEffect from './ui/NavbarScrollEffect'
+import Tabs from './ui/Tabs'
 
 // Инициализация кастомных селектов после загрузки страницы
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Инициализация слайдера
     initSlider()
+
+    // Фильтр по датам
+    new Tabs('data-tabs')
 
     //
     new NavbarScrollEffect('.navbar')

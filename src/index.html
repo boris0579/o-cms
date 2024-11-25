@@ -135,11 +135,15 @@
                                         </figcaption>
                                     </figure>
                                     <h2 class="main-slide__title">
-                                        <span class="main-slide__team">Краснодар</span>
+                                        <span class="main-slide__team"
+                                            >Краснодар</span
+                                        >
                                         <span class="main-slide__title-dash"
                                             >—</span
                                         >
-                                        <span class="main-slide__team">Спартак</span>
+                                        <span class="main-slide__team"
+                                            >Спартак</span
+                                        >
                                     </h2>
                                     <p class="main-slide__date">
                                         <time datetime="2024-10-19T16:30"
@@ -177,15 +181,20 @@
                                         </figcaption>
                                     </figure>
                                     <h2 class="main-slide__title">
-                                        <span class="main-slide__team">Зенит</span>
+                                        <span class="main-slide__team"
+                                            >Зенит</span
+                                        >
                                         <span class="main-slide__title-dash"
                                             >—</span
                                         >
-                                        <span class="main-slide__team">Динамо</span>
+                                        <span class="main-slide__team"
+                                            >Динамо</span
+                                        >
                                     </h2>
                                     <p class="main-slide__date">
                                         <time datetime="2024-10-19T16:30"
-                                            >Суббота, 19 октября в 16:30</time
+                                            >Воскресение, 19 октября в
+                                            16:30</time
                                         >
                                     </p>
                                     <button
@@ -203,7 +212,232 @@
             <div class="container container--main">
                 <div class="events-filtered">
                     <div class="events-filtered__filters">
-                        <form class="filters-form"></form>
+                        <!-- Start Filter tabs -->
+                        <div class="events-filtered__tabs">
+                            <nav data-tabs class="tabs">
+                                <a
+                                    href="/?filter=all"
+                                    class="tabs__link tabs__link--active"
+                                    data-tab-link
+                                    >Все матчи</a
+                                >
+                                <a
+                                    href="/?filter=october"
+                                    class="tabs__link"
+                                    data-tab-link
+                                    >Октябрь 2024</a
+                                >
+                                <a
+                                    href="/?filter=november"
+                                    class="tabs__link"
+                                    data-tab-link
+                                    >Ноябрь 2024</a
+                                >
+                                <a
+                                    href="/?filter=december"
+                                    class="tabs__link"
+                                    data-tab-link
+                                    >Декабрь 2024</a
+                                >
+                                <a
+                                    href="/?filter=january"
+                                    class="tabs__link"
+                                    data-tab-link
+                                    >Январь 2024</a
+                                >
+                            </nav>
+                        </div>
+                        <!-- End filter tabs -->
+
+                        <div class="events-filtered__items">
+                            <!--Search-->
+                            <div
+                                class="input input--filled events-filtered__item"
+                            >
+                                <input
+                                    type="text"
+                                    class="input__field"
+                                    placeholder="Найти..."
+                                />
+                                <span
+                                    class="input__icon input__icon--search"
+                                ></span>
+                                <span
+                                    class="input__icon input__icon--clear"
+                                ></span>
+                            </div>
+                            <!--Date-->
+                            <div class="input">
+                                <input
+                                    type="text"
+                                    class="input__field events-filtered__item"
+                                    placeholder="Дата"
+                                />
+                                <span
+                                    class="input__icon input__icon--date"
+                                ></span>
+                            </div>
+                            <!--City-->
+                            <div
+                                class="select events-filtered__item"
+                                data-select
+                            >
+                                <div
+                                    class="select__selected"
+                                    data-select-selected
+                                >
+                                    Город
+                                </div>
+                                <div
+                                    class="select__container"
+                                    data-select-options
+                                >
+                                    <div class="select__options">
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="kazan"
+                                        >
+                                            Казань
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="moscow"
+                                        >
+                                            Москва
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="krasnodar"
+                                        >
+                                            Краснодар
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="voronezh"
+                                        >
+                                            Воронеж
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Tourney-->
+                            <div
+                                class="select events-filtered__item"
+                                data-select
+                            >
+                                <div
+                                    class="select__selected"
+                                    data-select-selected
+                                >
+                                    Турнир
+                                </div>
+                                <div
+                                    class="select__container"
+                                    data-select-options
+                                >
+                                    <div class="select__options">
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="tourney1"
+                                        >
+                                            Турнир1
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="tourney2"
+                                        >
+                                            Турнир2
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="tourney3"
+                                        >
+                                            Турнир3
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="tourney4"
+                                        >
+                                            Турнир4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Stadium-->
+                            <div
+                                class="select events-filtered__input-city"
+                                data-select
+                            >
+                                <div
+                                    class="select__selected"
+                                    data-select-selected
+                                >
+                                    Стадион
+                                </div>
+                                <div
+                                    class="select__container"
+                                    data-select-options
+                                >
+                                    <div class="select__options">
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="stadium1"
+                                        >
+                                            Стадион1
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="stadium2"
+                                        >
+                                            Стадион2
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Home and guest rooms-->
+                            <div
+                                class="select events-filtered__item"
+                                data-select
+                            >
+                                <div
+                                    class="select__selected"
+                                    data-select-selected
+                                >
+                                    Домашние и гостевые
+                                </div>
+                                <div
+                                    class="select__container"
+                                    data-select-options
+                                >
+                                    <div class="select__options">
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="home1"
+                                        >
+                                            Домашние и гостевые
+                                        </div>
+                                        <div
+                                            class="select__option"
+                                            data-select-option
+                                            data-value="home2"
+                                        >
+                                            Домашние и гостевые
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Блок с выводом событий -->
@@ -421,7 +655,9 @@
                                     </a>
                                 </div>
                             </div>
-                            <a href="#!" class="button button--link events-container__link"
+                            <a
+                                href="#!"
+                                class="button button--link events-container__link"
                                 >Показать еще
                                 <span
                                     class="button__icon button__icon--link"

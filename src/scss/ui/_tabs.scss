@@ -1,0 +1,38 @@
+@use "../base/variables" as *;
+.tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 8px;
+
+    &__link {
+        white-space: nowrap;
+        position: relative;
+        text-decoration: none;
+        color: #111;
+        padding: 0 0 11px;
+        transition: $transition-slow;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        display: block;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &--active {
+            color: $color-primary;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: $color-primary;
+            }
+        }
+    }
+}
