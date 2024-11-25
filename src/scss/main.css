@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Suisse Intl";
   src: url("../assets/fonts/SuisseIntl-SemiBold.woff2") format("woff2"), url("../assets/fonts/SuisseIntl-SemiBold.woff") format("woff");
@@ -789,6 +790,10 @@ hr {
   overflow-x: auto;
   gap: 30px;
   padding-bottom: 8px;
+  scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+}
+.tabs::-webkit-scrollbar {
+  display: none; /* Скрываем скроллбар в WebKit-браузерах */
 }
 .tabs__link {
   white-space: nowrap;

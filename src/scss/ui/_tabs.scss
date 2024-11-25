@@ -4,6 +4,11 @@
     overflow-x: auto;
     gap: 30px;
     padding-bottom: 8px;
+    scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+
+    &::-webkit-scrollbar {
+        display: none; /* Скрываем скроллбар в WebKit-браузерах */
+    }
 
     &__link {
         white-space: nowrap;
