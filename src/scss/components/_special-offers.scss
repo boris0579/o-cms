@@ -7,15 +7,11 @@
         margin-top: 58px;
         display: flex;
         gap: 45px;
-        justify-content: center;
         z-index: 2;
         position: relative;
     }
 
     .special-offer {
-        background-color: transparent;
-        overflow: hidden;
-        border-radius: 10px;
         max-width: 420px;
         display: flex;
         flex-direction: column;
@@ -31,6 +27,13 @@
             object-position: center;
         }
 
+        &__content {
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
         &__title {
             font-family: "KULAG", sans-serif;
             text-transform: uppercase;
@@ -44,23 +47,31 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
+        &__link {
+            padding: 0 20px;
+        }
+
         &__button-icon {
             mask-image: url("../assets/icons/arrow-right-primary.svg");
         }
 
-        @media (max-width: 1200px) {
-            max-width: 100%;
-
-            &__image {
-                height: 200px;
-            }
-        }
-
         @media (max-width: 834px) {
             gap: 20px;
+            max-width: 100%;
 
             &__link {
                 justify-content: flex-start;
+            }
+
+            &__content,
+            &__link {
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 390px) {
+            &__image {
+                max-height: 170px;
             }
         }
     }

@@ -11,7 +11,7 @@
     flex-direction: column;
     padding: 100px 15px;
     transition: right 0.3s ease;
-    z-index: 2;
+    z-index: 4;
 
     &[data-panel="open"] {
         right: 0;

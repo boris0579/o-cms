@@ -37,14 +37,13 @@
         text-transform: uppercase;
         font-weight: 600;
         font-size: 12px;
-        line-height: 1.2;
 
         &--underlined {
             text-decoration: underline;
         }
     }
 
-    &__sections nav:last-child &__link{
+    &__sections nav:last-child &__link {
         font-size: 10px;
     }
 

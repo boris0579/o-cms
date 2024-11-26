@@ -1,33 +1,30 @@
 @use "../base/variables" as *;
 
 .ticket-purchase {
-    background: url("../assets/images/stadium-background.jpg") no-repeat center /
-        cover;
     color: #fff;
-    padding-top: 300px;
+    padding: 300px 0 160px;
     position: relative;
     overflow: hidden;
-    margin-top: -150px;
-
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 30%; // Высота градиента
-        pointer-events: none; // Градиент не будет перекрывать клики
-        z-index: 1;
-    }
+    margin-top: -160px;
 
     &::before {
-        top: 0; // Затемнение сверху
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
-    }
-
-    &::after {
-        bottom: 0; // Затемнение снизу
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0;
+        background: linear-gradient(
+                180deg,
+                #000000 0%,
+                rgba(0, 0, 0, 0) 50%,
+                #000 100%
+            ),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url("../assets/images/stadium-background.jpg") no-repeat center /
+                cover;
+        pointer-events: none;
+        z-index: 1;
     }
 
     &__header {
@@ -39,7 +36,7 @@
     }
 
     &__title {
-        font-family: "KULAG", serif;
+        font-family: "KULAG", sans-serif;
         font-weight: 400;
         font-size: 52px;
         line-height: 1;
@@ -118,6 +115,6 @@
         }
     }
     @media (max-width: 834px) {
-        padding-top: 230px;
+        padding: 230px 0 110px;
     }
 }

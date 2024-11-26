@@ -1,0 +1,47 @@
+.arena-info {
+    &__features {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 34px;
+        justify-content: space-between;
+    }
+
+    &__title {
+        width: 40%;
+        font-family: "KULAG", serif;
+        font-weight: 400;
+        font-size: 31px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+
+    &__description {
+        width: 60%;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 834px) {
+        &__item {
+            flex-wrap: wrap;
+        }
+        &__title,
+        &__description {
+            flex-grow: 1;
+        }
+    }
+
+    @media (max-width: 390px) {
+        &__description {
+            font-size: 12px;
+        }
+    }
+}

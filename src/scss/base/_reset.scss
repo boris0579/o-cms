@@ -11,17 +11,17 @@ html {
     font-size: 100%; // Используем стандартный размер шрифта
 }
 
-body {
-    font-family: sans-serif;
-    line-height: 1.4;
-    background-color: #fff;
-    color: #333;
-}
-
-// Сброс стилей для всех тегов
+/* Сбрасываем стандартные стили для ссылок */
 a {
     text-decoration: none;
-    color: inherit; // Снимаем стандартное подчеркивание и цвет ссылки
+    color: inherit;
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: inherit;
 }
 
 ul,
