@@ -442,7 +442,6 @@
 
                     <!-- Блок с выводом событий -->
                     <div class="events-filtered__list">
-                        <!-- <h2 class="events-filtered__title">События</h2> -->
                         <!-- Start event tickets -->
                         <div class="events-container">
                             <div class="event-tickets">
@@ -655,14 +654,15 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="show-link events-container__show-link">
                             <a
                                 href="#!"
-                                class="button button--link events-container__link"
+                                class="button button--link"
                                 >Показать еще
                                 <span
                                     class="button__icon button__icon--link"
                                 ></span
-                            ></a>
+                            ></a></div>
                         </div>
                         <!-- End event tickets -->
                     </div>
@@ -847,7 +847,7 @@
             <!-- End ticket purchase -->
             <!-- Start arena info -->
             <section class="arena-info">
-                <div class="container">
+                <div class="container arena-info__container">
                     <div class="arena-info__features">
                         <div class="arena-info__item">
                             <h2 class="arena-info__title">«Спартак Арена»</h2>
@@ -933,7 +933,7 @@
 
             <!-- Start news -->
             <section class="news">
-                <div class="container">
+                <div class="container news__container">
                     <div class="section-header">
                         <h2 class="section-header__title">
                             НОВОСТИ ФК СПАРТАК
@@ -990,9 +990,41 @@
                             </article>
                         </a>
                     </div>
+                    <div class="show-link news__show-link">
+                        <a href="#!" class="button button--link"
+                            >Показать еще
+                            <span class="button__icon button__icon--link"></span
+                        ></a>
+                    </div>
                 </div>
             </section>
             <!-- End news -->
+            <!-- Start questions -->
+            <section class="questions">
+                <div class="container questions__container">
+                    <h2 class="questions__title">ОСТАЛИСЬ ВОПРОСЫ?</h2>
+                    <p class="questions__text">
+                        Давайте мы поможем Вам приобрести билет на матч.
+                        Закажите звонок от наших специалистов! Покупая билеты на
+                        «Спартак Арену» на нашем сайте, вы экономите не только
+                        время, но и деньги.
+                    </p>
+                    <div class="questions__actions">
+                        <button class="button button--cta questions__button">
+                            Заказать звонок
+                        </button>
+                        <button
+                            class="button button--outline questions__button"
+                        >
+                            Выбрать билеты онлайн
+                            <span
+                                class="button__icon button__icon--outline-right"
+                            ></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- End questions-->
         </main>
 
         <!-- Start footer -->

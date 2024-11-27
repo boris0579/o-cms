@@ -26,6 +26,7 @@
 @use "components/ticket-purchase";
 @use "components/arena-info";
 @use "components/news";
+@use "components/questions";
 
 // @use 'utils/mixins';
 // @import 'utils/functions';
@@ -84,7 +85,11 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 15px;
-    &__link {
-        margin: 22px auto 6px;
-    }
+}
+
+.show-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 0 0;
 }

@@ -1,7 +1,7 @@
 .news {
     background-color: transparent;
     color: #fff;
-    padding-top: 117px;
+    padding: 100px 0;
 
     &__link {
         display: flex;
@@ -56,6 +56,10 @@
 
     &__button-icon {
         mask-image: url("../assets/icons/arrow-right-primary.svg");
+    }
+
+    &__show-link {
+        margin-top: 52px;
     }
 
     @media (max-width: 1200px) {
