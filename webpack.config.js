@@ -1,8 +1,24 @@
-// webpack.config.js
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const fs = require('fs') // Для работы с файловой системой
+
+// Путь к папке со страницами
+const pagesDir = path.resolve(__dirname, 'src/pages')
+
+// Получаем массив всех HTML-файлов в папке pages
+const pageFiles = fs
+    .readdirSync(pagesDir)
+    .filter(file => file.endsWith('.html'))
+
+// Создаем массив HtmlWebpackPlugin для каждой страницы
+const htmlPagesPlugins = pageFiles.map(file => {
+    return new HtmlWebpackPlugin({
+        template: path.join(pagesDir, file), // путь к исходному HTML
+        filename: `pages/${file}` // путь в папке dist
+    })
+})
 
 module.exports = {
     entry: './src/js/main.js', // основной файл JS
@@ -13,7 +29,10 @@ module.exports = {
     },
     mode: 'development', // или 'production'
     devServer: {
-        static: path.join(__dirname, 'dist'),
+        static: [
+            path.join(__dirname, 'dist'), // Сборка
+            path.join(__dirname, 'src/pages') // Для работы с исходниками страниц без сборки
+        ],
         port: 3000,
         open: true
     },
@@ -53,6 +72,7 @@ module.exports = {
             template: './src/index.html', // шаблон HTML
             filename: 'index.html'
         }),
+        ...htmlPagesPlugins, // Подключаем автоматически созданные плагины для страниц
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         })

@@ -1,0 +1,65 @@
+@use "../base/variables" as *;
+@use "../utils/mixins" as *;
+
+.breadcrumbs {
+    padding-bottom: 20px;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        column-gap: 15px;
+        overflow-x: auto;
+        @include hide-scrollbar;
+    }
+
+    &__item {
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        &::after {
+            content: "";
+            background-image: url("../assets/icons/arrow-breadcrumbs.svg");
+            background-repeat: no-repeat;
+            width: 6px;
+            height: 10px;
+            margin-left: 15px;
+            background-size: 100%;
+            background-position: center bottom;
+        }
+
+        &:last-child::after {
+            background-image: none;
+        }
+
+        &--current {
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    &__link {
+        transition: $transition-slow;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    @media (max-width: 390px) {
+        &__list {
+            column-gap: 10px;
+        }
+        &__item {
+            font-size: 12px;
+            &::after {
+                width: 4px;
+                height: 8px;
+                margin-left: 10px;
+            }
+        }
+    }
+}

@@ -5,3 +5,11 @@
     background-color: $initial-color;
     transition: $transition;
 }
+
+@mixin hide-scrollbar {
+    scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+
+    &::-webkit-scrollbar {
+        display: none; /* Скрываем скроллбар в WebKit-браузерах */
+    }
+}
